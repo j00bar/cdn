@@ -108,7 +108,18 @@ return [
                 | predefined grants: private, public-read, public-read-write, authenticated-read
                 | bucket-owner-read, bucket-owner-full-control, log-delivery-write
                 */
-                'acl' => 'public-read'
+                'acl' => 'public-read',
+                
+                /*
+                |--------------------------------------------------------------------------
+                | AWS Region
+                |--------------------------------------------------------------------------
+                |
+                | If your bucket is not in us-east-1, then you'll get a 301 Permanent Redirect
+                | from the AWS API, which is bad. You can specify your region here.
+                */
+                'region' => 'us-east-1'
+                
 
             ],
 
