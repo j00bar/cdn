@@ -115,6 +115,7 @@ class AwsS3Provider extends Provider implements ProviderInterface{
             'credential_secret'     => $this->default['providers']['aws']['s3']['credentials']['secret'],
             'buckets'               => $this->default['providers']['aws']['s3']['buckets'],
             'acl'                   => $this->default['providers']['aws']['s3']['acl'],
+            'region'                => $this->default['providers']['aws']['s3']['region']
         ];
 
         // check if any required configuration is missed
@@ -140,6 +141,7 @@ class AwsS3Provider extends Provider implements ProviderInterface{
                 S3Client::factory( array(
                         'key'       => $this->credential_key,
                         'secret'    => $this->credential_secret,
+                        'region'    => $this->region
                     )
                 )
             );
