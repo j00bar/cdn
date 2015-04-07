@@ -38,6 +38,7 @@ class AwsS3Provider extends Provider implements ProviderInterface{
                     ],
                     'buckets' => null,
                     'acl' => 'public-read',
+                    'region' => 'us-east-1',
                 ]
             ]
         ],
